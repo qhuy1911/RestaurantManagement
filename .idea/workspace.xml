@@ -2,37 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="208fb3ee-736a-48d7-8ff6-407e94b34499" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TMARestaurant.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tma/restaurant/BUS/BillBUS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tma/restaurant/BUS/MenuBUS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tma/restaurant/DAL/BillDAL.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tma/restaurant/DAL/MenuDAL.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tma/restaurant/DTO/Alcohol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tma/restaurant/DTO/Bill.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tma/restaurant/DTO/BreakfastMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tma/restaurant/DTO/DinnerMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tma/restaurant/DTO/DrinkMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tma/restaurant/DTO/FoodMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tma/restaurant/DTO/LunchMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tma/restaurant/DTO/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tma/restaurant/DTO/MenuItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tma/restaurant/DTO/SoftDrink.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tma/restaurant/GUI/BillManagementGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tma/restaurant/GUI/MainGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tma/restaurant/GUI/MenuManagementGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tma/restaurant/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tma/restaurant/resources/bills.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tma/restaurant/resources/menu.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tma/restaurant/test/BillTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tma/restaurant/test/MenuTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tma/restaurant/utils/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +155,7 @@
       <workItem from="1650877510638" duration="6315000" />
       <workItem from="1651022981936" duration="8837000" />
       <workItem from="1651033519674" duration="5167000" />
-      <workItem from="1651110372539" duration="5347000" />
+      <workItem from="1651110372539" duration="5813000" />
     </task>
     <servers />
   </component>
