@@ -46,7 +46,7 @@ public class MenuBusiness {
      * @param price : price to update the menu
      */
     public void update(String id, String name, String description, String image, float price) {
-        for (MenuItem menuItem : menuItemList) {
+        for (MenuItem menuItem : getMenuList()) {
             if (menuItem.getId().equals(id)) {
                 menuItem.setName(name);
                 menuItem.setDescription(description);
@@ -64,7 +64,7 @@ public class MenuBusiness {
      */
     public void delete(String id) {
         MenuItem menuItem = null;
-        for (MenuItem item : menuItemList) {
+        for (MenuItem item : getMenuList()) {
             if (item.getId().equals(id)) {
                 menuItem = item;
             }
@@ -80,7 +80,7 @@ public class MenuBusiness {
      * @return the menu with id passed in
      */
     public MenuItem getMenuById(String id) {
-        for (MenuItem menuItem : menuItemList) {
+        for (MenuItem menuItem : getMenuList()) {
             if (menuItem.getId().equals(id)){
                 return menuItem;
             }
@@ -94,6 +94,7 @@ public class MenuBusiness {
      * @return the menu list
      */
     public List<MenuItem> getMenuList() {
+        menuItemList = menuDAL.read();
         return menuItemList;
     }
 }

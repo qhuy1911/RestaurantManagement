@@ -114,6 +114,7 @@ public class BillBusiness {
      * @return the bill list
      */
     public List<Bill> getBillList() {
+        billList = billDAL.read();
         return billList;
     }
 

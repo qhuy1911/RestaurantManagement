@@ -10,6 +10,7 @@ import main.java.com.tma.restaurant.utils.Constants;
 
 import java.io.IOException;
 import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -221,8 +222,9 @@ public class BillManagementGUI {
      *
      */
     public void showBillList() {
+        List<Bill> billList = billBusiness.getBillList();
         System.out.println("---------------------------BILL LIST----------------------");
-        for (Bill bill : billBusiness.getBillList()) {
+        for (Bill bill : billList) {
             System.out.println("# Bill Id: " + bill.getId() + "\t" + bill.getOrderDate());
             System.out.format("%5s | ", "ID");
             System.out.format("%10s | ", "Item");
