@@ -221,7 +221,7 @@ public class BillManagementGUI {
      *
      */
     public void showBillList() {
-        System.out.println("-------------------BILL LIST----------------------");
+        System.out.println("---------------------------BILL LIST----------------------");
         for (Bill bill : billBusiness.getBillList()) {
             System.out.println("# Bill Id: " + bill.getId() + "\t" + bill.getOrderDate());
             System.out.format("%5s | ", "ID");
@@ -238,7 +238,7 @@ public class BillManagementGUI {
                 System.out.format("%10.1f$%n", billItem.getPriceBillItem());
             }
 
-            System.out.println("--------------------------------------------------");
+            System.out.println("----------------------------------------------------------");
             System.out.println("Subtotal: " + bill.getTotalPrice());
 
         }
@@ -282,7 +282,7 @@ public class BillManagementGUI {
      * @param bill : bill to show
      */
     private void showBill(Bill bill) {
-        System.out.println("-------------------BILL " + bill.getId() + "----------------------");
+        System.out.println("------------------------------BILL " + bill.getId() + "----------------------");
         System.out.format("%5s | ", "ID");
         System.out.format("%10s | ", "Item");
         System.out.format("%10s | ", "Price");
@@ -292,12 +292,12 @@ public class BillManagementGUI {
         for (BillItem billItem : bill.getBillItemList()) {
             System.out.format("%5s | ", billItem.getMenuItem().getId());
             System.out.format("%10s | ", billItem.getMenuItem().getName());
-            System.out.format("%10.1f | ", billItem.getMenuItem().getPrice());
+            System.out.format("%10.1f$ | ", billItem.getMenuItem().getPrice());
             System.out.format("%10s | ", billItem.getQuantity());
             System.out.format("%10.1f$%n", billItem.getPriceBillItem());
         }
 
-        System.out.println("--------------------------------------------------");
+        System.out.println("-------------------------------------------------------------");
         System.out.println("Subtotal: " + bill.getTotalPrice());
     }
 

@@ -12,6 +12,7 @@ import java.util.List;
 
 public class BillTest {
     List<Bill> billList;
+    Bill bill1, bill2, bill3;
     @Before
     public void setUp() throws Exception {
         MenuItem softDrink = new SoftDrink("1", "Coca", "Soft Drink", "coca.png", 10);
@@ -20,18 +21,22 @@ public class BillTest {
         MenuItem lunch = new LunchMenuItem("4", "Rice", "Lunch", "rice.png", 30);
         MenuItem dinner = new DinnerMenuItem("5", "Beef", "Dinner", "beef.png", 50);
 
-        Bill bill1 = new Bill("1", new Date());
-        Bill bill2 = new Bill("2", new Date());
-        Bill bill3 = new Bill("3", new Date());
-        Bill bill4 = new Bill("4", new Date());
-        Bill bill5 = new Bill("5", new Date());
+        bill1 = new Bill("1", new Date());
+        bill1.getBillItemList().add(new BillItem(softDrink, 7));
+        bill1.getBillItemList().add(new BillItem(breakfast, 2));
+
+        bill2 = new Bill("2", new Date());
+        bill2.getBillItemList().add(new BillItem(alcohol, 2));
+        bill2.getBillItemList().add(new BillItem(dinner, 2));
+
+        bill3 = new Bill("3", new Date());
+        bill3.getBillItemList().add(new BillItem(breakfast, 4));
+        bill3.getBillItemList().add(new BillItem(lunch, 4));
 
         billList = new ArrayList<>();
         billList.add(bill1);
         billList.add(bill2);
         billList.add(bill3);
-        billList.add(bill4);
-        billList.add(bill5);
     }
 
     @After
@@ -56,41 +61,58 @@ public class BillTest {
         Assert.assertEquals("5", billList.get(4).getId());
     }
 
-//    @Test
-//    public void testQuantity() {
-//        for (Bill bill : billList) {
-//            Assert.assertNotNull(bill.getMenuItem());
-//        }
-//
-//        Assert.assertEquals(8, billList.get(0).getMenuItem().getQuantity());
-//        Assert.assertEquals(2, billList.get(1).getMenuItem().getQuantity());
-//        Assert.assertEquals(4, billList.get(2).getMenuItem().getQuantity());
-//        Assert.assertEquals(3, billList.get(3).getMenuItem().getQuantity());
-//        Assert.assertEquals(2, billList.get(4).getMenuItem().getQuantity());
-//    }
+    @Test
+    public void testQuantity() {
+        for (Bill bill : billList) {
+            Assert.assertNotNull(bill.getBillItemList());
+        }
 
-//    @Test
-//    public void testTotalOfABill() {
-//        for (Bill bill : billList) {
-//            Assert.assertNotNull(bill.getMenuItem().getPriceBillItem());
-//        }
-//
-//        Assert.assertEquals(70, billList.get(0).getMenuItem().getPriceBillItem(), 0.0);
-//        Assert.assertEquals(80, billList.get(1).getMenuItem().getPriceBillItem(), 0.0);
-//        Assert.assertEquals(60, billList.get(2).getMenuItem().getPriceBillItem(), 0.0);
-//        Assert.assertEquals(90, billList.get(3).getMenuItem().getPriceBillItem(), 0.0);
-//        Assert.assertEquals(100, billList.get(4).getMenuItem().getPriceBillItem(), 0.0);
-//    }
-//
-//    @Test
-//    public void testTotalOfBillList() {
-//        double totalPrice = 0;
-//        for (Bill bill : billList) {
-//            totalPrice += bill.getMenuItem().getPriceBillItem();
-//        }
-//
-//        Assert.assertEquals(400, totalPrice, 0.0);
-//    }
+        Assert.assertEquals(7, bill1.getBillItemList().get(0).getQuantity());
+        Assert.assertEquals(2, bill1.getBillItemList().get(1).getQuantity());
+
+        Assert.assertEquals(2, bill2.getBillItemList().get(0).getQuantity());
+        Assert.assertEquals(2, bill2.getBillItemList().get(1).getQuantity());
+
+        Assert.assertEquals(4, bill3.getBillItemList().get(0).getQuantity());
+        Assert.assertEquals(4, bill3.getBillItemList().get(1).getQuantity());
+    }
+
+    @Test
+    public void testPriceBillItem() {
+        for (Bill bill : billList) {
+            Assert.assertNotNull(bill.getBillItemList());
+        }
+
+        Assert.assertEquals(70, bill1.getBillItemList().get(0).getPriceBillItem(), 0.0);
+        Assert.assertEquals(30, bill1.getBillItemList().get(1).getPriceBillItem(), 0.0);
+
+        Assert.assertEquals(80, bill2.getBillItemList().get(0).getPriceBillItem(), 0.0);
+        Assert.assertEquals(100, bill2.getBillItemList().get(1).getPriceBillItem(), 0.0);
+
+        Assert.assertEquals(60, bill3.getBillItemList().get(0).getPriceBillItem(), 0.0);
+        Assert.assertEquals(120, bill3.getBillItemList().get(1).getPriceBillItem(), 0.0);
+    }
+
+    @Test
+    public void testTotalOfABill() {
+        for (Bill bill : billList) {
+            Assert.assertNotNull(bill.getTotalPrice());
+        }
+
+        Assert.assertEquals(100, billList.get(0).getTotalPrice(), 0.0);
+        Assert.assertEquals(180, billList.get(1).getTotalPrice(), 0.0);
+        Assert.assertEquals(180, billList.get(2).getTotalPrice(), 0.0);
+    }
+
+    @Test
+    public void testTotalOfBillList() {
+        double totalPrice = 0;
+        for (Bill bill : billList) {
+            totalPrice += bill.getTotalPrice();
+        }
+
+        Assert.assertEquals(460, totalPrice, 0.0);
+    }
 
     @Test
     public void testOrderDate() {

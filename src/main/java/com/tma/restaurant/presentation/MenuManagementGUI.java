@@ -58,13 +58,13 @@ public class MenuManagementGUI {
      */
     public void showMenuList() {
         List<MenuItem> menuItemList = menuBusiness.getMenuList();
-        System.out.println("------------------------------MENU LIST-----------------------------");
+        System.out.println("------------------------------MENU LIST------------------------------");
         System.out.format("%5s | ", "ID");
         System.out.format("%10s | ", "Name");
         System.out.format("%15s | ", "Description");
         System.out.format("%15s | ", "Image");
         System.out.format("%11s%n", "Price");
-        System.out.println("--------------------------------------------------------------------");
+        System.out.println("---------------------------------------------------------------------");
         for (MenuItem menuItem : menuItemList) {
             System.out.format("%5s | ", menuItem.getId());
             System.out.format("%10s | ", menuItem.getName());
@@ -72,7 +72,7 @@ public class MenuManagementGUI {
             System.out.format("%15s | ", menuItem.getImage());
             System.out.format("%10.1f$%n", menuItem.getPrice());
         }
-        System.out.println("--------------------------------------------------------------------");
+        System.out.println("---------------------------------------------------------------------");
     }
 
     /**

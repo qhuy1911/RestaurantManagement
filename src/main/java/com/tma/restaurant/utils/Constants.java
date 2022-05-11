@@ -2,8 +2,8 @@ package main.java.com.tma.restaurant.utils;
 
 public class Constants {
     // file path
-    public static final String MENU_FILE_PATH = "src/main/resources/menu.txt";
-    public static final String BILL_FILE_PATH = "src/main/resources/bills.txt";
+    public static final String MENU_FILE_PATH = "C:\\Users\\intern.npqhuy\\IdeaProjects\\TMARestaurant\\src\\main\\resources\\menu.txt";
+    public static final String BILL_FILE_PATH = "C:\\Users\\intern.npqhuy\\IdeaProjects\\TMARestaurant\\src\\main\\resources\\bills.txt";
 
     // Menu type
     public static final int SOFT_DRINK_TYPE = 1;
