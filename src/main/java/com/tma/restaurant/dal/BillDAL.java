@@ -53,12 +53,8 @@ public class BillDAL {
             fis = new FileInputStream(Constants.BILL_FILE_PATH);
             ois = new ObjectInputStream(fis);
             billList = (List<Bill>) ois.readObject();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+        }  catch (IOException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
         } finally {
             fileHandler.closeStream(ois);
             fileHandler.closeStream(fis);

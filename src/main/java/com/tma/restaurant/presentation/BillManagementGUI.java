@@ -23,7 +23,6 @@ public class BillManagementGUI {
     private Scanner scanner = new Scanner(System.in);
     private MenuBusiness menuBusiness = new MenuBusiness();
     private BillBusiness billBusiness = new BillBusiness();
-    private BillItemBusiness billItemBusiness = new BillItemBusiness();
     private MenuManagementGUI menuManagementGUI = new MenuManagementGUI();
 
     /**

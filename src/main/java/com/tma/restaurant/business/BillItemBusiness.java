@@ -1,11 +1,9 @@
 package main.java.com.tma.restaurant.business;
 
-import main.java.com.tma.restaurant.dal.BillDAL;
 import main.java.com.tma.restaurant.model.Bill;
 import main.java.com.tma.restaurant.model.BillItem;
 import main.java.com.tma.restaurant.model.MenuItem;
 
-import java.io.IOException;
 import java.util.List;
 
 /**
@@ -33,7 +31,7 @@ public class BillItemBusiness {
      * @param quantity : quantity of menu item
      * @return billList after add bill item
      */
-    public List<Bill> addBillItem(List<Bill> billList, String billId, String menuItemId, int quantity) throws IOException {
+    public List<Bill> addBillItem(List<Bill> billList, String billId, String menuItemId, int quantity) {
         boolean check = false;
         MenuItem menuItem = menuBusiness.getMenuById(menuItemId);
         for (Bill bill : billList) {

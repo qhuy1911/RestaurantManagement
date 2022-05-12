@@ -6,7 +6,6 @@ import main.java.com.tma.restaurant.model.Bill;
 import main.java.com.tma.restaurant.model.BillItem;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -18,7 +17,6 @@ import java.util.List;
  */
 public class BillBusiness {
     private BillDAL billDAL;
-    private MenuBusiness menuBusiness;
     private BillItemBusiness billItemBusiness;
     private List<Bill> billList;
 
@@ -29,7 +27,6 @@ public class BillBusiness {
      */
     public BillBusiness() {
         billDAL = new BillDAL();
-        menuBusiness = new MenuBusiness();
         billItemBusiness = new BillItemBusiness();
         billList = billDAL.read();
     }
@@ -53,9 +50,9 @@ public class BillBusiness {
     /**
      * Update bill information in bill list
      *
-     * @param id
-     * @param menuItem
-     * @param quantity
+     * @param id : id of bill to update
+     * @param menuItem : menu item of bill to update
+     * @param quantity : quantity of menu item
      */
     public void updateBill(String id, MenuItem menuItem, int quantity) throws IOException {
         if (quantity == 0) {

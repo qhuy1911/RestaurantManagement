@@ -2,7 +2,6 @@ package main.java.com.tma.restaurant.presentation;
 
 import main.java.com.tma.restaurant.utils.Constants;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -16,7 +15,7 @@ public class RestaurantGUI {
     /**
      * Display main interface to screen
      */
-    public void show() throws IOException {
+    public void show() {
         boolean exit = false;
         String choose;
         Scanner scanner = new Scanner(System.in);
